@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg {
+    text-align: center;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/011/635/825/non_2x/abstract-square-interface-modern-background-concept-fingerprint-digital-scanning-visual-security-system-authentication-login-vector.jpg');
+    background-size: cover;
+    height: 110vh;
+    background-position: center;
+}
+
+.img {
+    height: 30vh;
+    border-radius: 20px;
+}
+.head{
+    color: white;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.inp {
+    border-width: 0px;
+    border-radius: 20px;
+    width: 50vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(5px); 
+    color: aliceblue;
+}
+
+.email {122
+    height: 10vh;
+    width: 60vh;
+    border-radius: 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    margin: 20px;
+    backdrop-filter: blur(5px); 
+    color: aliceblue;
+
+}
+
+.loginbtn {
+    height: 10vh;
+    width: 60vh;
+    border-radius: 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(5px);
+
+}
+
+.login {
+    margin-top: 15px;
+}
+.email:hover, .inp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+}
+.loginbtn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(203, 174, 88, 0.8);
+}
+p{
+    color:aliceblue
+}

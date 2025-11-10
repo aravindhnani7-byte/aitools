@@ -1,0 +1,278 @@
+/* GLOBAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fallback background color */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -2; /* Set to -2 */
+}
+.bg-img{
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    background-color: #1a1a1a;
+}
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* New: Semi-transparent Overlay for better text readability */
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Dark overlay for contrast */
+    background-color: rgba(0, 0, 0, 0.55); 
+    z-index: -1; /* Placed between video and content */
+}
+
+/* 2. HEADER/CONTENT STYLES */
+.content-header {
+    position: relative;
+    z-index: 10;
+    padding: 40px 20px 20px;
+    color: white;
+    text-align: center;
+}
+
+.content-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800; /* Extra bold for impact */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tool-category {
+    position: relative;
+    z-index: 10;
+    padding: 0 20px 40px;
+}
+
+.category-title {
+    color: #4CAF50; /* A vibrant color for category headers */
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* 3. TOOL CARDS CONTAINER (Using Flexbox for modern layout) */
+.tool-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 30px; /* Space between cards */
+    max-width: 1200px; /* Max width for large screens */
+    margin: 0 auto; /* Center the container itself */
+}
+
+/* 4. TOOL CARD STYLES */
+.tool-card {
+    /* Changed from inline-block to flex for better vertical alignment */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center content horizontally */
+    
+    background: rgba(255, 255, 255, 0.1); /* Lighter, semi-transparent background */
+    backdrop-filter: blur(5px); /* Adds a cool blur effect to the background */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+    border-radius: 12px;
+    
+    padding: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+    
+    width: 200px; /* Fixed width */
+    min-height: 300px; /* Min height to maintain structure */
+    
+    /* Animation for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect for Engagement */
+.tool-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px #4CAF50; /* More prominent shadow with an accent color glow */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tool-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tool-card p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.tool-img {
+    height: 80px; /* Fixed height for consistency */
+    width: 80px;
+    object-fit: contain;
+    border-radius: 10px; /* Slight round on the image */
+    background-color: white; /* Ensures non-transparent logos look good */
+    padding: 5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content-header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .tool-cards-container {
+        gap: 20px;
+    }
+    
+    .tool-card {
+        width: calc(50% - 40px); /* Two cards per row on tablets/small screens */
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-card {
+        width: 100%; /* Single card per row on phones */
+    }
+}
+.crsl{
+    height: 40vh;
+    margin:10px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 10px;
+    
+}
+.tophead{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    
+    padding: 10px;
+}
+.card{
+    font-size: 10px;
+   
+    color: rgb(228, 31, 31);
+    
+    background-color: #1a1a1a;
+}
+.cnt{
+    margin-left:10px;
+
+}
+.foot{
+    height: 60px;
+    background-color: rgb(141, 137, 137);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100vh; 
+    margin:20vh;
+    font-size: 14px;
+    clear: both;
+}
+.note{
+    font-size: 12px;
+    color: white;
+    margin:20vh;
+    margin-top: 10vh;
+}
+.home{
+    margin-left:190vh;
+    color:white
+}
+.imgtoolsai{
+    margin-left: 10vh;
+    margin-top: 10vh;
+    
+}
+.alltools{
+    
+    object-fit: contain;
+    border-radius: 10px; /* Slight round on the image */
+    background-color: rgb(242, 240, 233); /* Ensures non-transparent logos look good */
+    padding: 5px;
+    margin:5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ch{
+    font-size: 15px;
+    color: black;
+}
+.btn{
+    border-radius: 15px;
+  
+}
+.crsl:hover{
+    transform: translateY(-5px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px #4CAF50; /* More prominent shadow with an accent color glow */
+    
+}
+.alltools:hover{
+    transform: translateY(-5px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px #4CAF50; /* More prominent shadow with an accent color glow */
+    background-color: bisque;
+    
+}
+.card:hover{
+    transform: translateY(-5px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px #414fb9; /* More prominent shadow with an accent color glow */
+    
+}
+.tlcm{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family:"";
+}
+.imgt{
+    
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 10px;
+}
+.navbar-brand{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+.dddd{
+    color: rgb(248, 245, 245);
+}
