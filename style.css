@@ -175,7 +175,7 @@ body {
     border-color: white;
     border-width: 2px;
     border-radius: 10px;
-    
+    width:30vw;
 }
 .tophead{
     font-size: 30px;
@@ -218,7 +218,8 @@ body {
 }
 .imgtoolsai{
     margin-left: 10vh;
-    margin-top: 10vh;
+    margin-top: 30vh;
+    
     
 }
 .alltools{
@@ -275,4 +276,5 @@ body {
 }
 .dddd{
     color: rgb(248, 245, 245);
+
 }
